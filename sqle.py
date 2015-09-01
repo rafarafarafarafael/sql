@@ -17,7 +17,7 @@ try:
 	conn.commit()
 
 except sql.OperationalError as e:
-	print "Oops! Something went wrong. Try again..."
-	print e
+	print "Oops! Something went wrong, {}. Try again...".format(e)
+
 # close the database
 conn.close()
